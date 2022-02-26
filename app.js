@@ -56,6 +56,7 @@ app.get('/', async (req, res) => {
                 // List of issue
 
                 res.json({ msg: 'halaman home' })
+                res.render('dashboard', { issues })
             }
         }
     }

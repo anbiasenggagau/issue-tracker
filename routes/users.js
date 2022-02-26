@@ -10,11 +10,15 @@ const Users = require('../models/users')
 // To the create user form
 router.get('/create', (req, res) => {
     res.json({ msg: 'halaman form untuk membuat users' })
+    res.render('register')
 })
 
 // To the login form
 router.get('/login', (req, res) => {
     res.json({ msg: "halaman login" })
+    res.render('login', {
+        error: false
+    })
 })
 
 // Logout
